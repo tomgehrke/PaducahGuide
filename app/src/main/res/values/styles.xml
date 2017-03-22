@@ -1,0 +1,81 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000066</item>
+        <item name="colorPrimaryDark">#000033</item>
+        <item name="colorAccent">#e6ad05</item>
+    </style>
+
+    <style name="MainTabLayout" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/colorPrimaryDark</item>
+        <item name="tabBackground">@color/colorPrimaryDark</item>
+        <item name="tabIndicatorColor">@color/colorAccent</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabTextColor">#B3FFFFFF</item>
+        <item name="tabTextAppearance">@style/MainTabLayoutText</item>
+    </style>
+
+    <style name="MainTabLayoutText">
+        <item name="android:textSize">@dimen/TabTextSize</item>
+    </style>
+
+    <style name="InfoWithIcon">
+        <item name="android:layout_marginLeft">@dimen/InfoWithIconSideMargins</item>
+        <item name="android:layout_marginRight">@dimen/InfoWithIconSideMargins</item>
+        <item name="android:layout_marginTop">@dimen/InfoWithIconVerticalMargins</item>
+        <item name="android:layout_marginBottom">@dimen/InfoWithIconVerticalMargins</item>
+    </style>
+
+    <style name="InfoIcon">
+        <item name="android:layout_width">@dimen/InfoIconSize</item>
+        <item name="android:layout_height">@dimen/InfoIconSize</item>
+        <item name="android:layout_marginRight">@dimen/InfoIconMarginRight</item>
+    </style>
+
+    <style name="SiteHeading">
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:background">@color/colorSiteHeadingBackground</item>
+        <item name="android:maxHeight">@dimen/SiteImageHeight</item>
+    </style>
+
+    <style name="SiteHeadingText">
+        <item name="android:padding">@dimen/SiteHeadingTextPadding</item>
+    </style>
+
+    <style name="SiteName">
+        <item name="android:textSize">@dimen/SiteNameTextSize</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginBottom">@dimen/SiteNameMarginBottom</item>
+    </style>
+
+    <style name="SiteDescription">
+        <item name="android:textSize">@dimen/SiteDescriptionTextSize</item>
+    </style>
+
+    <style name="SiteHoursOfOperation">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/InfoIconSize</item>
+        <item name="android:textSize">@dimen/SiteHoursOfOperation</item>
+    </style>
+
+    <style name="SiteStreetAddress">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/InfoIconSize</item>
+        <item name="android:textSize">@dimen/SiteStreetAddressTextSize</item>
+    </style>
+
+    <style name="SitePhoneNumber">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_height">@dimen/InfoIconSize</item>
+        <item name="android:textSize">@dimen/SitePhoneNumberTextSize</item>
+    </style>
+
+
+    <style name="SiteImage">
+        <item name="android:layout_width">@dimen/SiteImageWidth</item>
+        <item name="android:layout_height">@dimen/SiteImageHeight</item>
+    </style>
+
+</resources>

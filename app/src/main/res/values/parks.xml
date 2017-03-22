@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All of the park for the Guide -->
+<resources>
+    <string-array name="park_name">
+        <item>@string/park_01_name</item>
+        <item>@string/park_02_name</item>
+        <item>@string/park_03_name</item>
+    </string-array>
+    <string-array name="park_street_address">
+        <item>@string/park_01_streetaddress</item>
+        <item>@string/park_02_streetaddress</item>
+        <item>@string/park_03_streetaddress</item>
+    </string-array>
+    <string-array name="park_description">
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <string-array name="park_phone_number">
+        <item>@string/park_01_phonenumber</item>
+        <item></item>
+        <item>@string/park_03_phonenumber</item>
+    </string-array>
+    <string-array name="park_hours_of_operations">
+        <item>@string/park_01_hours</item>
+        <item></item>
+        <item></item>
+    </string-array>
+    <integer-array name="park_thumbnail">
+        <item>@drawable/ic_thumb_parks_bob_noble</item>
+        <item>@drawable/ic_thumb_parks_keiler</item>
+        <item>@drawable/ic_thumb_parks_stuart_nelson</item>
+    </integer-array>
+</resources>

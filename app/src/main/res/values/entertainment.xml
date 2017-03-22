@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All of the Entertainment locations for the Guide -->
+<resources>
+    <string-array name="entertainment_name">
+        <item>@string/entertainment_01_name</item>
+        <item>@string/entertainment_02_name</item>
+    </string-array>
+    <string-array name="entertainment_street_address">
+        <item>@string/entertainment_01_streetaddress</item>
+        <item>@string/entertainment_02_streetaddress</item>
+    </string-array>
+    <string-array name="entertainment_description">
+        <item>@string/entertainment_01_description</item>
+        <item>@string/entertainment_02_description</item>
+    </string-array>
+    <string-array name="entertainment_phone_number">
+        <item>@string/entertainment_01_phonenumber</item>
+        <item>@string/entertainment_02_phonenumber</item>
+    </string-array>
+    <string-array name="entertainment_hours_of_operations">
+        <item></item>
+        <item></item>
+    </string-array>
+    <integer-array name="entertainment_thumbnail">
+        <item>@drawable/ic_thumb_entertainment_luther_f_carson</item>
+        <item>@drawable/ic_thumb_entertainment_market_house_theatre</item>
+    </integer-array>
+</resources>

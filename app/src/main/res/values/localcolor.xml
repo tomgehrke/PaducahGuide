@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All of the Local Color locations for the Guide -->
+<resources>
+    <string-array name="localcolor_name">
+        <item>@string/localcolor_01_name</item>
+        <item>@string/localcolor_02_name</item>
+        <item>@string/localcolor_03_name</item>
+        <item>@string/localcolor_04_name</item>
+    </string-array>
+    <string-array name="localcolor_street_address">
+        <item>@string/localcolor_01_streetaddress</item>
+        <item>@string/localcolor_02_streetaddress</item>
+        <item>@string/localcolor_03_streetaddress</item>
+        <item>@string/localcolor_04_streetaddress</item>
+    </string-array>
+    <string-array name="localcolor_description">
+        <item>@string/localcolor_01_description</item>
+        <item>@string/localcolor_02_description</item>
+        <item></item>
+        <item>@string/localcolor_04_description</item>
+    </string-array>
+    <string-array name="localcolor_phone_number">
+        <item>@string/localcolor_01_phonenumber</item>
+        <item>@string/localcolor_02_phonenumber</item>
+        <item>@string/localcolor_03_phonenumber</item>
+        <item>@string/localcolor_04_phonenumber</item>
+    </string-array>
+    <string-array name="localcolor_hours_of_operations">
+        <item>@string/localcolor_01_hours</item>
+        <item></item>
+        <item>@string/localcolor_03_hours</item>
+        <item>@string/localcolor_04_hours</item>
+    </string-array>
+    <integer-array name="localcolor_thumbnail">
+        <item>@drawable/ic_thumb_localcolor_national_quilt_museum</item>
+        <item>@drawable/ic_thumb_localcolor_floodwall_murals</item>
+        <item>@drawable/ic_thumb_localcolor_paducah_railroad_museum</item>
+        <item>@drawable/ic_thumb_localcolor_whitehaven</item>
+    </integer-array>
+</resources>

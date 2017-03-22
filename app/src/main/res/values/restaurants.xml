@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- All of the Restaurants for the Guide -->
+<resources>
+    <string-array name="restaurant_name">
+        <item>@string/restaurant_01_name</item>
+        <item>@string/restaurant_02_name</item>
+        <item>@string/restaurant_02_name</item>
+    </string-array>
+    <string-array name="restaurant_street_address">
+        <item>@string/restaurant_01_streetaddress</item>
+        <item>@string/restaurant_02_streetaddress</item>
+        <item>@string/restaurant_03_streetaddress</item>
+    </string-array>
+    <string-array name="restaurant_description">
+        <item>@string/restaurant_01_description</item>
+        <item>@string/restaurant_02_description</item>
+        <item>@string/restaurant_03_description</item>
+    </string-array>
+    <string-array name="restaurant_phone_number">
+        <item>@string/restaurant_01_phonenumber</item>
+        <item>@string/restaurant_02_phonenumber</item>
+        <item>@string/restaurant_03_phonenumber</item>
+    </string-array>
+    <string-array name="restaurant_hours_of_operations">
+        <item>@string/restaurant_01_hours</item>
+        <item>@string/restaurant_02_hours</item>
+        <item>@string/restaurant_03_hours</item>
+    </string-array>
+    <integer-array name="restaurant_thumbnail">
+        <item>@drawable/ic_thumb_restaurant_cynthias</item>
+        <item>@drawable/ic_thumb_restaurant_maxs_brick_oven</item>
+        <item>@drawable/ic_thumb_restaurant_shandies</item>
+    </integer-array>
+</resources>

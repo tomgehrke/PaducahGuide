@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="8dp"
+              android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/SiteHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            style="@style/SiteImage"/>
+
+        <LinearLayout
+            style="@style/SiteHeadingText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/SiteName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/description"
+                style="@style/SiteDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hours_of_operation_linearlayout"
+        style="@style/InfoWithIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/InfoIcon"
+            android:src="@drawable/ic_clock"/>
+
+        <TextView
+            android:id="@+id/hours_of_operation"
+            style="@style/SiteHoursOfOperation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/street_address_linearlayout"
+        style="@style/InfoWithIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/InfoIcon"
+            android:src="@drawable/ic_navigate"/>
+
+        <TextView
+            android:id="@+id/street_address"
+            style="@style/SiteStreetAddress"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phone_number_linearlayout"
+        style="@style/InfoWithIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            style="@style/InfoIcon"
+            android:src="@drawable/ic_phone"/>
+
+        <TextView
+            android:id="@+id/phone_number"
+            style="@style/SitePhoneNumber"
+            android:layout_width="match_parent"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+
