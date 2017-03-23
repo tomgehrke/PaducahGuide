@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -68,7 +67,7 @@ public class EntertainmentFragment extends Fragment {
 
                 // Create intent to send the Street Address as a destination to a Google Maps (or other)
                 Intent navigationIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?daddr=" + site.getStreetAddress()));
+                        Uri.parse(getString(R.string.navigationIntentUriPrefix, site.getStreetAddress())));
                 startActivity(navigationIntent);
             }
         });

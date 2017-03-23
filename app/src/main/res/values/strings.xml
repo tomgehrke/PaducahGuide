@@ -4,6 +4,8 @@
     <string name="tab2_name">Dining</string>
     <string name="tab3_name">Entertainment</string>
     <string name="tab4_name">Parks</string>
+    <string name="navigationIntentUriPrefix">http://maps.google.com/maps?daddr=%1$s</string>
+    <string name="siteClassToString">%1$s@mName="%2$s", mStreetAddress="%3$s", mDescription="%4$s", mHoursOfOperation="%5$s", mPhoneNumber="%6$s", mImageResourceId=%7$d</string>
     <string name="restaurant_01_name">Cynthia\'s</string>
     <string name="restaurant_01_streetaddress">125 Market House Square, Paducah, KY 42001</string>
     <string name="restaurant_01_description">Californian-influenced Italian fare made with farm-fresh ingredients served amid walls of local art.</string>

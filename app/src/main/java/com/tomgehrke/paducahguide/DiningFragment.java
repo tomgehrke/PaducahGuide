@@ -68,7 +68,7 @@ public class DiningFragment extends Fragment {
 
                 // Create intent to send the Street Address as a destination to a Google Maps (or other)
                 Intent navigationIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?daddr=" + site.getStreetAddress()));
+                        Uri.parse(getString(R.string.navigationIntentUriPrefix, site.getStreetAddress())));
                 startActivity(navigationIntent);
             }
         });

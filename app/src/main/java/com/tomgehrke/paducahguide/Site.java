@@ -4,6 +4,8 @@ package com.tomgehrke.paducahguide;
 //
 // Used to manage information used to describe a place.
 
+import android.content.res.Resources;
+
 public class Site {
 
     // Constants
@@ -85,14 +87,14 @@ public class Site {
 
     @Override
     public String toString() {
-        return "Site{" +
-                "mName='" + mName + '\'' +
-                ", mStreetAddress='" + mStreetAddress + '\'' +
-                ", mDescription='" + mDescription + '\'' +
-                ", mHoursOfOperation='" + mHoursOfOperation + '\'' +
-                ", mPhoneNumber='" + mPhoneNumber + '\'' +
-                ", mImageResourceId=" + mImageResourceId +
-                '}';
+        return Resources.getSystem().getString(R.string.siteClassToString,
+                getClass().getName(),
+                mName,
+                mStreetAddress,
+                mDescription,
+                mHoursOfOperation,
+                mPhoneNumber,
+                mImageResourceId);
     }
 
 }

@@ -38,7 +38,7 @@ public class ParksFragment extends Fragment {
         TypedArray siteThumbnail = resources.obtainTypedArray(R.array.park_thumbnail);
 
         // Add sites to the ArrayList by iterating through the XML-stored arrays
-        for(int site=0; site < siteNames.length(); site++) {
+        for (int site = 0; site < siteNames.length(); site++) {
             siteArrayList.add(new Site(
                     siteNames.getString(site),
                     siteStreetAddresses.getString(site),
@@ -68,7 +68,7 @@ public class ParksFragment extends Fragment {
 
                 // Create intent to send the Street Address as a destination to a Google Maps (or other)
                 Intent navigationIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://maps.google.com/maps?daddr=" + site.getStreetAddress()));
+                        Uri.parse(getString(R.string.navigationIntentUriPrefix, site.getStreetAddress())));
                 startActivity(navigationIntent);
             }
         });

@@ -24,10 +24,26 @@ public class SiteArrayAdapter extends ArrayAdapter<Site> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // Inflate our Site Item layout
-        View siteListItemView = convertView;
-        if (siteListItemView == null) {
-            siteListItemView = LayoutInflater.from(getContext()).inflate(R.layout.site_list_item, parent, false);
+        ViewHolder viewHolder;
+
+        // Inflate our Site Item layout if there wasn't one already
+        if (convertView == null) {
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.site_list_item, parent, false);
+
+            // Set up ViewHolder
+            viewHolder = new ViewHolder();
+            viewHolder.nameTextView = (TextView) convertView.findViewById(R.id.name);
+            viewHolder.streetAddressTextView = (TextView) convertView.findViewById(R.id.street_address);
+            viewHolder.descriptionTextView = (TextView) convertView.findViewById(R.id.description);
+            viewHolder.phoneNumberTextView = (TextView) convertView.findViewById(R.id.phone_number);
+            viewHolder.hoursOfOperation = (TextView) convertView.findViewById(R.id.hours_of_operation);
+            viewHolder.thumbnail = (ImageView) convertView.findViewById(R.id.thumbnail);
+
+            // Store holder with the view
+            convertView.setTag(viewHolder);
+        } else {
+            // Just use the saved ViewHolder. No need to do all the findViewById stuff.
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
         // Get the current Site
@@ -37,47 +53,48 @@ public class SiteArrayAdapter extends ArrayAdapter<Site> {
         if (currentSite != null) {
 
             // We always have to have a Name and Street Address
-            TextView nameTextView = (TextView) siteListItemView.findViewById(R.id.name);
-            nameTextView.setText(currentSite.getName());
-
-            TextView streetAddressTextView = (TextView) siteListItemView.findViewById(R.id.street_address);
-            streetAddressTextView.setText(currentSite.getStreetAddress());
+            viewHolder.nameTextView.setText(currentSite.getName());
+            viewHolder.streetAddressTextView.setText(currentSite.getStreetAddress());
 
             // Other properties are optional and views should be hidden if the contain no information
 
-            TextView descriptionTextView = (TextView) siteListItemView.findViewById(R.id.description);
-            if (currentSite.getDescription().equals("")) {
-                descriptionTextView.setVisibility(View.GONE);
+            if (currentSite.getDescription().isEmpty()) {
+                viewHolder.descriptionTextView.setVisibility(View.GONE);
             } else {
-                descriptionTextView.setText(currentSite.getDescription());
+                viewHolder.descriptionTextView.setText(currentSite.getDescription());
             }
 
-            TextView phoneNumberTextView = (TextView) siteListItemView.findViewById(R.id.phone_number);
-            if (currentSite.getPhoneNumber().equals("")) {
-                LinearLayout phoneNumberLinearLayout = (LinearLayout) siteListItemView.findViewById(R.id.phone_number_linearlayout);
-                phoneNumberLinearLayout.setVisibility(View.GONE);
+            if (currentSite.getPhoneNumber().isEmpty()) {
+                // Phone number is contained in parent view that needs to be hidden
+                ((LinearLayout) viewHolder.phoneNumberTextView.getParent()).setVisibility(View.GONE);
             } else {
-                phoneNumberTextView.setText(currentSite.getPhoneNumber());
+                viewHolder.phoneNumberTextView.setText(currentSite.getPhoneNumber());
             }
 
-            TextView hoursOfOperation = (TextView) siteListItemView.findViewById(R.id.hours_of_operation);
-            if (currentSite.getHoursOfOperation().equals("")) {
-                LinearLayout hoursOfOperationLinearLayout = (LinearLayout) siteListItemView.findViewById(R.id.hours_of_operation_linearlayout);
-                hoursOfOperationLinearLayout.setVisibility(View.GONE);
+            if (currentSite.getHoursOfOperation().isEmpty()) {
+                // Hours of operation is contained in parent view that needs to be hidden
+                ((LinearLayout) viewHolder.hoursOfOperation.getParent()).setVisibility(View.GONE);
             } else {
-                hoursOfOperation.setText(currentSite.getHoursOfOperation());
+                viewHolder.hoursOfOperation.setText(currentSite.getHoursOfOperation());
             }
 
-            ImageView thumbnail = (ImageView) siteListItemView.findViewById(R.id.thumbnail);
             if (currentSite.hasImage()) {
-                thumbnail.setImageResource(currentSite.getImageResourceId());
+                viewHolder.thumbnail.setImageResource(currentSite.getImageResourceId());
             } else {
-                thumbnail.setVisibility(View.GONE);
+                viewHolder.thumbnail.setVisibility(View.GONE);
             }
         }
 
-        return siteListItemView;
+        return convertView;
     }
 
+}
 
+class ViewHolder {
+    TextView nameTextView;
+    TextView streetAddressTextView;
+    TextView descriptionTextView;
+    TextView phoneNumberTextView;
+    TextView hoursOfOperation;
+    ImageView thumbnail;
 }
